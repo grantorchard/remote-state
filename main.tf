@@ -11,6 +11,6 @@ data terraform_remote_state "certificates" {
 }
 
 output "vault_certificate" {
-  value = data.terraform_remote_state.certificates.aws_acm_certificate.vault.arn
+  value = data.terraform_remote_state.certificates.vault_certificate
   }
   
