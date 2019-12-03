@@ -12,9 +12,7 @@ data terraform_remote_state "certificates" {
 
 resource null_resource "echo" {
   provisioner "local-exec" {
-    inline = [
-      "echo ${data.terraform_remote_state.certificates.outputs.vault_certificate}"
-    ]
+    command = "echo ${data.terraform_remote_state.certificates.outputs.vault_certificate}"
   }
 }
 
